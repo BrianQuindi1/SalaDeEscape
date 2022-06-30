@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Una Noche en el Museo";
+}
+
+<html>
+    <head>
+        <title> Una Noche en el Museo </title>
+    </head>
+    <body class="fondoJugar">
+        <div class="contenedorGeneral">
+            <h1 class="textoTitulo">Una Noche en el Museo</h1>
+            <p class="texto">
+                Es de madrugada y te encontrás trabajando normalmente a la noche, hasta que vos y tu compañero Julián comienzan a oír ruidos extraños en la sala de Paleontología, entonces se dirigen a esa sección para averiguar sobre que se trataba....
+            </p>
+            <div class="cont-img-museos">
+                <img class="img-museos2" src="/Fotos/museo.jpg">
+                <img class="img-museos" src="/Fotos/preocupados.jpg">
+            </div>
+        </div>
+    </body>
+    <a href='@Url.Action("Comenzar", "Escape")' class="btn btn-danger cont-img-museos"> COMENZAR </a>
+</html>

@@ -1,0 +1,36 @@
+@{
+    ViewBag.Title = "Habitacion 4";
+}
+<html>
+    <head>
+        <title>Habitacion 4</title>
+    </head>
+    <body class="fondoJugar">
+        <div>
+            <p class="textoTitulo">
+                Habitacion 4: (7:30 am) 
+            </p>
+            <p class="texto">
+                ¡Bien!, sabés que es una gaviota por lo tanto usaste el alimento de exhibición de la sala para poder distraerla y así escapar acercándote a la puerta de salida trasera. 
+                Ahora, luego de escapar de la gaviota, corrés desesperado unos metros más hacia tu derecha, y con una cara sonriente podés ver la puerta trasera, pero para poder abrirla tenés que resolver un laberinto de llaves, que una de las 3 que hay abrirá la puerta de servicio. 
+            </p>
+            
+            <div>
+                 <img class="img-hab4" src="/Fotos/LlavesHabitacion4.jpg">
+            </div>
+
+            <form class="form" method="post" action='@Url.Action("Habitacion", "Escape")'>
+                Respuesta: 
+                <input type="text" name="incognita" autocomplete="off">
+                <input type="hidden" name="sala" value="@Escape.EstadoJuego">
+                <input type="submit" value="validar">
+            </form>
+            <button class="pistasHab" onclick="alert('Segui CON ATENCION el hilo de cada llave.')"> Pista 1 </button>
+            <button class="pistasHab" onclick="alert('Si te esta costando mucho entonces miralo de atras para adelante.')"> Pista 2 </button>
+            <button class="pistasHab" onclick="alert('La solucion es la llave A.')"> Solucion </button>
+
+            
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+@{
+    ViewBag.Title = "Habitacion 2";
+}
+<html>
+    <head>
+        <title>Habitacion 2</title>
+    </head>
+    <body class="fondoJugar">
+        <div>
+            <p class="textoTitulo"> Habitacion 2: (3:30 am)</p>
+            <p class="texto">
+               ¡Excelente!, descifraste el código y avanzaste a la puerta que estaba bajo llave y ahora está abierta, dejando atrás al dinosaurio.
+                Seguiste avanzando y llegaste a la sala de mamíferos actuales donde te das cuenta, al observar a un oso con vida, que el dinosaurio no era el único que había cobrado vida, sino que se trataba de distintos animales de todo el museo. Cruzás miradas con el oso y tras una larga persecución logra rasguñarte dejándote una herida sangrante en el abdomen y un tajo de tela de remera rota.
+                Mientras corrías encontras un armario abierto donde podés ver que hay distintos objetos y entre estos rápidamente tuviste que elegir una de estas opciones que en el momento pensaste que eran las más útiles para poder escapar.
+            </p>
+            <p class="texto">-Un pez</p>
+            <p class="texto">-Una soga</p>
+            <p class="texto">-Una piedra</p>
+            <p class="texto">-Una guitarra</p>
+            <div>
+                 <img class="img-hab2" src="/Fotos/pez.png">
+                 <img class="img-hab2" src="/Fotos/soga.png">
+                 <img class="img-hab2" src="/Fotos/piedra.png">
+                 <img class="img-hab2" src="/Fotos/guitarra.png">
+            </div>
+            <div>
+                <img class="img-hab2-oso" src="/Fotos/representacionOso.jpg" >
+            </div>
+
+            <form class="form" method="post" action='@Url.Action("Habitacion", "Escape")'>
+                Respuesta: 
+                <input type="text" name="incognita" autocomplete="off">
+                <input type="hidden" name="sala" value="@Escape.EstadoJuego">
+                <input type="submit" value="validar">
+            </form>
+            <button class="pistasHab" onclick="alert('Es imposible matar al oso.')"> Pista 1 </button>
+            <button class="pistasHab" onclick="alert('Tu principal objetivo es que se distraiga.')"> Pista 2 </button>
+            <button class="pistasHab" onclick="alert('La solucion es pez.')"> Solucion </button>
+            
+            
+        </div>
+
+    </body>
+</html>

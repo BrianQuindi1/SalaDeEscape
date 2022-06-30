@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Victoria";
+}
+
+<html>
+    <head>
+        <title>Victoria</title>
+    </head>
+    <body class="fondoJugar">
+        <div class="contenedorGeneral">
+            <h1 class="textoTitulo">Victoria (8:01 am)</h1>
+            <p class="texto">
+                ¡Felicidades!, usaste la llave "A" para escapar y lograste salir con vida del museo. Se hacen las 8 de la mañana y vos estando afuera ves que hay gente esperando para entrar, con lo cual sabes que terminó tu horario laboral.
+                Ojalá que no te despidan del trabajo por los desastres causados.
+                Siempre recordaremos a Julián como un buen hombre.
+            </p>
+            <div>
+                <img class="img-vicotoria" src="/Fotos/trofeo.png">
+                <img class="img-fotoFinal" src="/Fotos/fotoFinal.jpg">
+            </div>
+        </div>
+    </body>
+    <a href='@Url.Action("Comenzar", "Escape")' class="btn btn-danger cont-img-museos"> JUGAR DE NUEVO </a>
+</html>

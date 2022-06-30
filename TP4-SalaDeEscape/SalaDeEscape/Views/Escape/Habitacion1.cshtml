@@ -1,0 +1,36 @@
+@{
+    ViewBag.Title = "Habitacion 1";
+}
+<html>
+    <head>
+        <title>Habitacion 1</title>
+    </head>
+    <body class="fondoJugar">
+        <div>
+            <p class="textoTitulo">
+                Habitacion 1: (1:30 am)
+            </p>
+            <p class="texto">
+                Al llegar se encuentran con las exhibiciones vacías, sin fósiles, y piensan que es un ladrón, pero de repente escuchas un grito detrás tuyo, te das vuelta y ves que era Julián a los gritos porque un dinosaurio, de verdad, se lo estaba comiendo. Asustadisimo, salis corriendo y te encerras en una habitación fuera del alcance del dinosaurio, donde deberían estar los fósiles, pero no por mucho tiempo debido a que está derribando la pared. Al cerrar la puerta te das cuenta de que hay una puerta encriptada frente a la pared que el dinosaurio está queriendo destruir. Descifrá el código antes de que el dinosaurio destruya la pared de atrás y te coma.
+            </p>
+            <p class ="texto">Código encriptado: 6-16-20-9-12-5-20</p>
+             <div>
+                 <img class="img-fosiles-dinosaurio" src="/Fotos/SeccionGeneralDinosaurios.jpg">
+                 <img class="img-fosiles-dinosaurio" src="/Fotos/cabezaDinosaurio.jpg">
+                 <img class="img-corre-dinosaurio" src="/Fotos/correDeDinosaurio.jpg">
+            </div>
+            <form method="post" action='@Url.Action("Habitacion", "Escape")'>
+                <p class="texto"> Respuesta: </p> 
+                <input type="text" name="incognita" autocomplete="off">
+                <input type="hidden" name="sala" value="@Escape.EstadoJuego">
+                <input type="submit" value="validar">
+            </form>
+            <button class="pistasHab" onclick="alert('Pensa los números como letras del abecedario para obtener el código encriptado.')"> Pista 1 </button>
+            <button class="pistasHab" onclick="alert('Sustancia orgánica muerta que se ha petrificado mediante procesos químicos y geológicos y se encuentra en los antiguos depósitos sedimentarios de la corteza terrestre.')"> Pista 2 </button>
+            <button class="pistasHab" onclick="alert('La solucion es fosiles.')"> Solucion </button>
+           
+        </div>
+        
+
+    </body>
+</html>

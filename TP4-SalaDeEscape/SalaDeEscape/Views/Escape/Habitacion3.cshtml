@@ -1,0 +1,49 @@
+@{
+    ViewBag.Title = "Habitacion 3";
+}
+<html>
+    <head>
+        <title>Habitacion 3</title>
+    </head>
+    <body class="fondoJugar">
+        <div>
+            <p class="textoTitulo">
+                Habitacion 3: (5:30 am) 
+            </p>
+            <p class="texto">
+                ¡Excelente!, usaste el pez para que el oso se distraiga y lo coma para así lograr escapar.
+                Ahora pasaste a la sala de aves, que estaba a unos metros de donde estaba el oso. Cuando llegás tenés que cambiar de enfoque, ya que ahora te enfrentás a animales voladores. Deberás saber a qué especie de ave te enfrentas.
+            </p>
+            <audio controls autoplay=true>
+            <source src="/Fotos/gaviota.mp3" type="audio/mp3">
+            </audio>
+            <div>
+                 <img class="img-hab3" src="/Fotos/gaviota.png">
+                 <img class="img-hab3" src="/Fotos/buho.png">
+                 <img class="img-hab3" src="/Fotos/aguila.png">
+                 <img class="img-hab3" src="/Fotos/loro.png">
+            </div>
+            
+            <p class="texto">-Una gaviota</p>
+            <p class="texto">-Un buho</p>
+            <p class="texto">-Un aguila</p>
+            <p class="texto">-Un loro</p>
+
+            <div>
+                <img class="img-hab3-ave" src="/Fotos/representacionAves.jpg">
+            </div>
+            <form class="form" method="post" action='@Url.Action("Habitacion", "Escape")'>
+                Respuesta: 
+                <input type="text" name="incognita" autocomplete="off">
+                <input type="hidden" name="sala" value="@Escape.EstadoJuego">
+                <input type="submit" value="validar">
+            </form>
+            <button class="pistasHab" onclick="alert('Ave palmípeda marina de unos 75 cm de longitud, plumaje muy tupido, gris o negro en la espalda y sobre las alas, y blanco en el resto del cuerpo, con el pico amarillo algo curvo en la punta; vive en las costas y se alimenta esencialmente de los peces que atrapa en el mar.')"> Pista 1 </button>
+            <button class="pistasHab" onclick="alert('Tiene el mismo nombre que una localidad en Mar de las Pampas.')"> Pista 2 </button>
+            <button class="pistasHab" onclick="alert('La solucion es gaviota.')"> Solucion </button>
+
+            
+        </div>
+
+    </body>
+</html>
